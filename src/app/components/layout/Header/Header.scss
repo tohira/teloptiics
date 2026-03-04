@@ -1,0 +1,174 @@
+@import '../../../assets/sass/mixin.scss';
+@import '../../../assets/sass/veriables.scss';
+
+.header {
+	width: 100%;
+	position: fixed;
+	height: 200px;
+	padding: 20px;
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		gap: 21px;
+		&__wrap1 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.menu {
+				display: none;
+				&__wrap {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+
+					&__link {
+						font-size: 20px;
+						color: $black1;
+					}
+				}
+			}
+			@media (max-width: 991px) {
+				.menu {
+					display: block;
+				}
+			}
+
+			.list1 {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+				&__item {
+					&__link {
+						@include text($black1, 400);
+						// display: flex;
+						.map {
+							font-size: 20px;
+							color: #747883;
+						}
+					}
+
+					&__link:nth-child(1) {
+						display: flex;
+						align-items: center;
+						gap: 4px;
+					}
+
+					@media (max-width: 1200px) {
+						.links {
+							display: none;
+							background-color: red;
+						}
+					}
+				}
+			}
+			.list2 {
+				display: flex;
+				gap: 20px;
+				&__item {
+					&__wrap {
+						display: flex;
+						align-items: center;
+						gap: 7px;
+						.icon {
+							@include text($black1, 700);
+						}
+						.icon:nth-child(1) {
+							color: #0696e7;
+						}
+						.icon:nth-child(2) {
+							color: #7f4da0;
+						}
+						.icon:nth-child(3) {
+							color: #25d366;
+						}
+					}
+					&__link {
+						display: flex;
+						gap: 10px;
+						@include text($black1, 500);
+						span {
+							color: #747883;
+						}
+					}
+				}
+			}
+			@media (max-width: 991px) {
+				.list1,
+				.list2 {
+					display: none;
+				}
+			}
+		}
+		&__wrap2 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.form {
+				width: 60%;
+
+				padding: 13px 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background-color: #f7f8fb;
+				border: 1px solid #d7d9dc;
+
+				&__input {
+					background-color: transparent;
+					border: none;
+					font-weight: 400;
+					font-size: 16px;
+				}
+				&::placeholder {
+					color: #747883;
+				}
+			}
+			.icon {
+				display: flex;
+				align-items: center;
+				gap: 25px;
+				&__link {
+					font-size: 20px;
+					color: #747883;
+				}
+			}
+		}
+
+		&__wrap3 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.link {
+				@include text($black1, 500);
+				position: relative;
+			}
+			.link::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				background-color: #0696e7;
+				left: 0;
+				bottom: -2px;
+				transition: all 0.3s ease;
+			}
+			.link:hover::after {
+				width: 100%;
+			}
+			.link:hover {
+				color: #0696e7;
+			}
+			@media (max-width: 1200px) {
+				.links {
+					display: none;
+				}
+			}
+		}
+		@media (max-width: 991px) {
+			&__wrap2,
+			&__wrap3 {
+				display: none;
+			}
+		}
+	}
+}

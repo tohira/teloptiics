@@ -1,0 +1,26 @@
+@import '../../../assets/sass/mixin.scss';
+@import '../../../assets/sass/veriables.scss';
+
+.intro{
+	padding-top: 200px;
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		&__left{
+			width: 60%;
+			img{
+				border-radius: 20px;
+
+			}
+		}
+		&__right{
+			width: 40%;
+			img{
+				border-radius: 20px;
+
+			}
+		}
+	}
+	
+}
