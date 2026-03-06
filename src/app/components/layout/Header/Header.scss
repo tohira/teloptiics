@@ -5,11 +5,28 @@
 	width: 100%;
 	position: fixed;
 	height: 200px;
-	padding: 20px;
+	z-index: 999;
+	background-color: $white;
+
 	&__nav {
 		display: flex;
 		flex-direction: column;
 		gap: 21px;
+		.hr {
+			width: 100%;
+			border: none;
+			height: 2px;
+			background-color: #e0e1e3;
+		}
+		.bg {
+			background-color: #f7f8f9;
+			padding: 8px 0;
+		}
+		@media (max-width: 991px) {
+			.bg {
+				background-color: $white;
+			}
+		}
 		&__wrap1 {
 			display: flex;
 			justify-content: space-between;
@@ -118,9 +135,10 @@
 					border: none;
 					font-weight: 400;
 					font-size: 16px;
+					
 				}
-				&::placeholder {
-					color: #747883;
+				&__input::placeholder {
+					color: #6384df;
 				}
 			}
 			.icon {
@@ -166,9 +184,16 @@
 		}
 		@media (max-width: 991px) {
 			&__wrap2,
-			&__wrap3 {
+			&__wrap3,
+			.hr {
 				display: none;
 			}
 		}
+	}
+}
+
+@media (max-width:991px) {
+	.header{
+		height: 70px;
 	}
 }

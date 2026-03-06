@@ -1,26 +1,205 @@
 @import '../../../assets/sass/mixin.scss';
 @import '../../../assets/sass/veriables.scss';
 
-.intro{
+.intro {
 	padding-top: 200px;
-	&__content{
-		display: flex;
-		justify-content: space-between;
-		gap: 20px;
-		&__left{
-			width: 60%;
-			img{
-				border-radius: 20px;
+	background-color: #d7d9dc;
+	&__content {
+		padding: 25px 0;
 
+		display: flex;
+
+		gap: 20px;
+		&__left {
+			min-width: 300px;
+			flex: 4;
+			position: relative;
+			overflow: hidden;
+			.info {
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+
+				&__left {
+					position: absolute;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 100px;
+					padding: 20px;
+					min-width: 300px;
+
+					&__wrap {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						.title {
+							@include title($white, 700);
+							display: flex;
+							flex-direction: column;
+						}
+						.subtitle {
+							@include subtitle($white, 700);
+							display: flex;
+						}
+					}
+					.link {
+						padding: 16px 30px;
+						background-color: #f1da09;
+						@include text($black1, 500);
+					}
+				}
+				@media (max-width: 992px) {
+					&__left {
+						gap: 60px;
+						.link {
+							padding: 14px 15px;
+						}
+					}
+				}
+				@media (max-width: 567px) {
+					&__left {
+						gap: 30px;
+						.link {
+							padding: 7px 15px;
+						}
+					}
+				}
+				&__right {
+					position: absolute;
+					right: 0;
+					top: 40px;
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					align-items: end;
+					justify-content: end;
+					padding: 10px;
+					&__subtitle {
+						@include subtitle($white, 500);
+					}
+					&__discount {
+						@include subtitle($white, 600);
+						text-decoration: line-through;
+					}
+					&__price {
+						@include subtitle($white, 600);
+						background-color: red;
+						padding: 10px 25px;
+						transform: skew(-10deg);
+						border-radius: 3px;
+					}
+					&__text {
+						@include text($white, 400);
+						display: flex;
+						flex-direction: column;
+						gap: 4px;
+						text-align: end;
+					}
+				}
+				@media (max-width: 991px) {
+					&__right {
+						gap: 10px;
+					}
+				}
+				@media (max-width: 567px) {
+					&__right {
+						gap: 0px;
+					}
+				}
+			}
+			.mySwiper {
+				width: 100%;
+				height: 500px;
+			}
+			@media (max-width: 767px) {
+				.mySwiper {
+					height: 300px;
+				}
+			}
+			img {
+				border-radius: 20px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.btn__next,
+			.btn__prev {
+				position: absolute;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				top: 50%;
+				bottom: 50%;
+				transform: translateY(-50%);
+				z-index: 5;
+				background-color: #dfe2e7;
+				border: 10px solid #ffffff4d;
+			}
+
+			.btn__next {
+				right: 0;
 			}
 		}
-		&__right{
-			width: 40%;
-			img{
-				border-radius: 20px;
+		&__right {
+			min-width: 300px;
+			flex: 1;
+			position: relative;
+			overflow: hidden;
+			position: relative;
+			.right__wrap {
+				position: absolute;
+				top: 20px;
+				left: 10px;
+				&__title{
+					@include subtitle($black1,700)
+				}
+					&__text{
+					@include text($black1,700)
+				}
+			}
+			.btn__next2,
+			.btn__prev2 {
+				position: absolute;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				top: 50%;
+				bottom: 50%;
+				transform: translateY(-50%);
+				z-index: 5;
+				background-color: #dfe2e7;
+				border: 10px solid red;
+			}
 
+			.btn__next2 {
+				right: 0px;
+			}
+			.mySwiper {
+				width: 100%;
+				height: 500px;
+			}
+			@media (max-width: 767px) {
+				.mySwiper {
+					height: 300px;
+				}
+			}
+			img {
+				border-radius: 20px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 	}
-	
+}
+@media (max-width: 991px) {
+	.intro {
+		padding-top: 100px;
+		&__content {
+			flex-wrap: wrap;
+			gap: 0;
+		}
+	}
 }

@@ -1,5 +1,31 @@
-@mixin text ($color, $weight){
+@mixin title($color, $weight) {
+	font-size: 55px;
+	color: $color;
+	font-weight: $weight;
+	@media (max-width: 991px) {
+		font-size: 40px;
+	}
+	@media (max-width: 767px	) {
+		font-size: 35px;
+	}
+}
+@mixin subtitle($color, $weight) {
+	font-size: 35px;
+	color: $color;
+	font-weight: $weight;
+	@media (max-width: 991px) {
+		font-size: 25px;
+	}
+	@media (max-width: 767px) {
+		font-size: 16px;
+	}
+}
+
+@mixin text($color, $weight) {
 	font-size: 15px;
 	color: $color;
 	font-weight: $weight;
+	@media (max-width: 991px) {
+		font-size: 14px;
+	}
 }

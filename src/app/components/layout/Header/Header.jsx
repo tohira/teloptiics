@@ -7,10 +7,12 @@ export default function Header() {
 	const [data, setData] = useState([])
 	return (
 		<div className='header'>
-			<div className='container'>
+			
 				<nav className='header__nav'>
-					<div className='header__nav__wrap1'>
-						<div className='menu'>
+					<div className='bg'>
+					<div className="container">
+						<div className="header__nav__wrap1">
+								<div className='menu'>
 							<div className='menu__wrap'>
 								<a className='menu__wrap__link' href=''>
 									<i class='fa-solid fa-bars'></i>
@@ -105,17 +107,24 @@ export default function Header() {
 								</a>
 							</li>
 						</ol>
+						</div>
 					</div>
-					<div className='header__nav__wrap2'>
-						<a href=''>
+					</div>
+					<div className=''>
+					  <div className="container">
+							<div className="header__nav__wrap2">
+									<a href=''>
 							<img src={logo} alt='' />
 						</a>
 						<form className='form'>
+						   <div className="form__wrap">
+									<label htmlFor="">Введите название:</label>
 							<input
 								className='form__input'
 								type='text'
-								placeholder='Введите название: Бинокль армейский'
-							/>
+								placeholder=' Бинокль армейский'
+							/> 
+							 </div>
 							<span className='form__icon'>
 								<i class='fa-solid fa-magnifying-glass'></i>
 							</span>
@@ -126,21 +135,27 @@ export default function Header() {
 						<a className='icon__link' href=''><i class='fa-regular fa-heart'></i></a>
 						<a className='icon__link' href=''><i class='fa-solid fa-cart-arrow-down'></i></a>
 						</div>
+						</div>
+							</div>
 					</div>
-					<div className='header__nav__wrap3'>
-						<a className='link' href="">Телескопы</a>
-						<a className='link' href="">Бинокли</a>
-						<a className='link' href="">Лупы</a>
-						<a className='link links' href="">Микроскопы</a>
-						<a className='link links' href="">Зрительные трубы</a>
-						<a className='link links' href="">Монокуляры</a>
-						<a className='link' href="">Прицелы</a>
-						<a className='link' href="">Дальномеры</a>
-						<a className='link' href="">Тепловизоры</a>
-						<a className='link' href="">Еще</a>
-					</div>
+				 <hr className='hr' />
+						<div className="container">
+							<div className="header__nav__wrap3">
+						    <a className='link' href="">Телескопы</a>
+						    <a className='link' href="">Бинокли</a>
+						    <a className='link' href="">Лупы</a>
+						    <a className='link links' href="">Микроскопы</a>
+						    <a className='link links' href="">Зрительные трубы</a>
+						    <a className='link links' href="">Монокуляры</a>
+						    <a className='link' href="">Прицелы</a>
+						    <a className='link' href="">Дальномеры</a>
+						    <a className='link' href="">Тепловизоры</a>
+						    <a className='link' href="">Еще</a>
+							</div>
+						</div>
+				
 				</nav>
 			</div>
-		</div>
+
 	)
 }
